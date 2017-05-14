@@ -33,7 +33,7 @@ public class ClientsForm {
         startFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 
-        startFrame.setSize(900,400);
+        startFrame.setSize(1200,400);
         startFrame.setLocationRelativeTo(null);
 
         try {
@@ -129,7 +129,7 @@ public class ClientsForm {
                 updateModel();
             }
         });
-        phoneSearchField.addKeyListener(new KeyAdapter() {
+        addressSearchField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
                 super.keyReleased(e);
@@ -259,8 +259,8 @@ public class ClientsForm {
                 whereValuesList.add("%" + addressSearchField.getText() + "%");
             }
             if (contractSearchField.getText().length() > 0) {
-                where += (where.length() > 0 ? "AND " : "") + "contract LIKE ?";
-                whereValuesList.add("%" + phoneSearchField.getText() + "%");
+                where += (where.length() > 0 ? "AND " : "") + "contract_num LIKE ?";
+                whereValuesList.add("%" + contractSearchField.getText() + "%");
             }
 
             String[] whereValues = new String[whereValuesList.size()];
