@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="provider:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/provider_jar</output-path>
+    <root id="root">
+      <element id="archive" name="provider.jar">
+        <element id="module-output" name="provider" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/../MysqlDriver/mysql-connector-java-5.1.41-bin.jar" />
+    </root>
+  </artifact>
+</component>
